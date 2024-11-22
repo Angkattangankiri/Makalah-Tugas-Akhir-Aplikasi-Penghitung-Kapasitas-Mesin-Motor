@@ -10,16 +10,14 @@ from math import pi
 class KapasitasMesinApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Navigasi Browser dengan 3 Jendela")
+        self.root.title("Penghitung Kapasitas Mesin")
         self.root.geometry("1366x720")
         
         self.notebook = ttk.Notebook(root)
         
-        # Tab 1 
         self.tab1 = tk.Frame(self.notebook)
         self._setup_tab1()
 
-        # Tab 2 
         self.tab2 = tk.Frame(self.notebook)
         self._setup_tab2()
 
@@ -27,9 +25,8 @@ class KapasitasMesinApp:
         self.notebook.add(self.tab2, text="Kapasitas Mesin")
 
         self.notebook.pack(expand=True, fill="both")
-
-        # Initialize motor directory
-        self.motor_directory = []  # Fix: Initialize motor directory list here
+        
+        self.motor_directory = [] 
 
     def _setup_tab1(self):
         image_path = "d:/TA/photomode_17122020_235104.png"
