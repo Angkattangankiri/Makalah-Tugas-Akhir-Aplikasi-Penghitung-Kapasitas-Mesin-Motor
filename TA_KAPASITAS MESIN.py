@@ -6,11 +6,11 @@ from tkinter import PhotoImage
 from PIL import Image, ImageTk
 from math import pi
 
-# KELAS
+
 class KapasitasMesinApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Penghitung Kapasitas Mesin")
+        self.root.title("Penghitung Kapasitas Mesin Motor")
         self.root.geometry("1366x720")
         
         self.notebook = ttk.Notebook(root)
@@ -25,11 +25,11 @@ class KapasitasMesinApp:
         self.notebook.add(self.tab2, text="Kapasitas Mesin")
 
         self.notebook.pack(expand=True, fill="both")
-        
-        self.motor_directory = [] 
+
+        self.motor_directory = []  
 
     def _setup_tab1(self):
-        image_path = "d:/TA/photomode_17122020_235104.png"
+        image_path = "photomode_17122020_235104.png"
         img = Image.open(image_path)
         img = img.resize((1366, 720))  
         photo = ImageTk.PhotoImage(img)
@@ -45,7 +45,7 @@ class KapasitasMesinApp:
     
     def _setup_tab2(self):
 
-        image_path = "d:\TA\Gaming_5000x3125.jpg"
+        image_path = "Gaming_5000x3125.jpg"
         img = Image.open(image_path)
         img = img.resize((1366, 720))  
         photo = ImageTk.PhotoImage(img)
